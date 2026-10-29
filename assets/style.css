@@ -1,0 +1,134 @@
+/* Mangiolo – Notebook-udtrykket. Tokens fra Notion: Design & UI-principper */
+
+@font-face { font-family: 'Newsreader'; font-weight: 400; font-style: normal; font-display: swap; src: url('fonts/Newsreader_400Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Newsreader'; font-weight: 500; font-style: normal; font-display: swap; src: url('fonts/Newsreader_500Medium.ttf') format('truetype'); }
+@font-face { font-family: 'Newsreader'; font-weight: 400; font-style: italic; font-display: swap; src: url('fonts/Newsreader_400Regular_Italic.ttf') format('truetype'); }
+@font-face { font-family: 'Instrument Sans'; font-weight: 400; font-style: normal; font-display: swap; src: url('fonts/InstrumentSans_400Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Instrument Sans'; font-weight: 600; font-style: normal; font-display: swap; src: url('fonts/InstrumentSans_600SemiBold.ttf') format('truetype'); }
+
+:root {
+  --bg: #F7F4EE;
+  --surface: #EDE7DB;
+  --text: #1C1B19;
+  --text-body: #3A3832;
+  --text-muted: #6B665C;
+  --line: #DDD6C8;
+  --recipe: #5E6B2E;
+  --serif: 'Newsreader', Georgia, serif;
+  --sans: 'Instrument Sans', -apple-system, system-ui, sans-serif;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text-body);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.page {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+}
+
+.site-header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.lockup { display: inline-block; line-height: 0; }
+.lockup img { height: 40px; width: auto; }
+
+main { padding-top: 32px; }
+
+h1, h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  color: var(--text);
+  margin: 0;
+}
+
+h1 { font-size: 36px; line-height: 1.12; margin-bottom: 12px; }
+h2 { font-size: 24px; line-height: 1.2; margin: 36px 0 8px; }
+
+p, ul, ol { margin: 0 0 16px; }
+ul, ol { padding-left: 22px; }
+li { margin-bottom: 8px; }
+strong { color: var(--text); font-weight: 600; }
+
+a { color: var(--text); text-decoration-color: var(--line); text-underline-offset: 3px; }
+a:hover { text-decoration-color: var(--text); }
+
+.lead {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.35;
+  color: var(--text-body);
+}
+
+.overline {
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 8px;
+}
+
+.updated { color: var(--text-muted); font-size: 14px; }
+
+.badge {
+  display: inline-block;
+  background: var(--recipe);
+  color: var(--bg);
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 5px 8px;
+  border-radius: 4px;
+  margin: 8px 0 24px;
+}
+
+.section {
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+  margin-top: 32px;
+}
+
+.links { list-style: none; padding: 0; margin: 0; }
+.links li { margin: 0; border-bottom: 1px solid var(--line); }
+.links a {
+  display: block;
+  padding: 12px 0;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.site-footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--text-muted);
+}
+.site-footer nav { display: flex; flex-wrap: wrap; gap: 4px 20px; margin-bottom: 8px; }
+.site-footer a { color: var(--text-muted); }
+
+@media (min-width: 640px) {
+  .page { padding-top: 48px; }
+  h1 { font-size: 44px; }
+  .lockup img { height: 48px; }
+}

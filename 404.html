@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mangiolo</title>
+<meta name="description" content="See what curious food lovers cook and eat — and learn from it.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<div class="page">
+<header class="site-header"><a class="lockup" href="/" aria-label="Mangiolo home"><img src="/assets/mangiolo-lockup.svg" alt="Mangiolo"></a></header>
+<main>
+<div id="recipe" hidden>
+<p class="overline">Shared recipe</p>
+<h1>This recipe is on Mangiolo</h1>
+<p class="lead">Someone shared a recipe with you from Mangiolo, a community app for curious food lovers. Recipes open in the app — and the app is coming soon to the App Store.</p>
+<p><a href="/">Learn more about Mangiolo</a></p>
+</div>
+<div id="notfound">
+<p class="overline">Not found</p>
+<h1>This page isn't here</h1>
+<p class="lead">The link may be old or mistyped.</p>
+<p><a href="/">Go to the Mangiolo front page</a></p>
+</div>
+<script>
+if (/^\/recipe(\/|$)/.test(location.pathname)) {
+  document.getElementById('recipe').hidden = false
+  document.getElementById('notfound').hidden = true
+  document.title = 'This recipe is on Mangiolo'
+}
+</script>
+</main>
+<footer class="site-footer">
+<nav><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/guidelines">Community Guidelines</a><a href="mailto:support@mangiolo.com">support@mangiolo.com</a></nav>
+<p>© 2026 Mangiolo</p>
+</footer>
+</div>
+</body>
+</html>
